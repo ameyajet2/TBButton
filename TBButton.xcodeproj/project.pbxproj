@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C5D9F7C2BF57D940010FBB4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C75610E2BF570F200D49D37 /* Info.plist */; };
 		7C7561012BF570F100D49D37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7561002BF570F100D49D37 /* AppDelegate.swift */; };
 		7C7561032BF570F100D49D37 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7561022BF570F100D49D37 /* SceneDelegate.swift */; };
 		7C7561052BF570F100D49D37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7561042BF570F100D49D37 /* ViewController.swift */; };
-		7C7561082BF570F100D49D37 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 7C7561072BF570F100D49D37 /* Base */; };
-		7C75610A2BF570F200D49D37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C7561092BF570F200D49D37 /* Assets.xcassets */; };
-		7C75610D2BF570F200D49D37 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 7C75610C2BF570F200D49D37 /* Base */; };
 		7C7561162BF5710700D49D37 /* ButtonConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7561142BF5710700D49D37 /* ButtonConfig.swift */; };
 		7C7561172BF5710700D49D37 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7561152BF5710700D49D37 /* Button.swift */; };
 /* End PBXBuildFile section */
@@ -83,6 +81,7 @@
 				7C7560F92BF570F100D49D37 /* Sources */,
 				7C7560FA2BF570F100D49D37 /* Frameworks */,
 				7C7560FB2BF570F100D49D37 /* Resources */,
+				7C5D9F7B2BF57D550010FBB4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -131,13 +130,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C75610A2BF570F200D49D37 /* Assets.xcassets in Resources */,
-				7C75610D2BF570F200D49D37 /* Base in Resources */,
-				7C7561082BF570F100D49D37 /* Base in Resources */,
+				7C5D9F7C2BF57D940010FBB4 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7C5D9F7B2BF57D550010FBB4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nbN=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbN=$((bN += 1))\nbN=$(printf \"%d\" $bN)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $bN\" \"$INFOPLIST_FILE\"\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7C7560F92BF570F100D49D37 /* Sources */ = {
@@ -226,7 +243,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -283,7 +300,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -300,6 +317,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VZQXLWJX4Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TBButton/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -307,6 +325,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,9 +333,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jet2.TBButton.TBButton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -327,6 +350,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VZQXLWJX4Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TBButton/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -334,6 +358,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -341,9 +366,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jet2.TBButton.TBButton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
