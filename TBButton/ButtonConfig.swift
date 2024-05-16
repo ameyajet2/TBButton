@@ -20,6 +20,11 @@ let buttonPrimaryDisabledTextColor = "#98a2b3"
 let buttonSmTextEnabled = "Button title Enabled"
 let buttonSmTextDisabled = "Button title Disabled"
 
+let buttonTitleTopInset = CGFloat(1.0)
+let buttonTitlebottomInset = CGFloat(1.0)
+let buttonTitleLeftInset = CGFloat(1.0)
+let buttonTitleRightInset = CGFloat(1.0)
+
 //let buttonSecondaryDefaultBackgroundColor = "#ffffff"
 //let buttonSecondaryDefaultBorderColor = "#d0d5dd"
 //let buttonSecondaryDefaultTextColor = "#344054"

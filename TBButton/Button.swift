@@ -17,11 +17,13 @@ public class TBButtoniOS : UIButton {
                 self.titleLabel?.textColor = UIColor.hexStringToUIColor(hex: buttonPrimaryDefaultTextColor)
                 self.backgroundColor = UIColor.hexStringToUIColor(hex: buttonPrimaryDefaultBorderColor)
                 self.setBackgroundColor(color: UIColor.hexStringToUIColor(hex: buttonPrimaryDefaultBackgroundColor), forState: .normal)
+                self.titleLabel?.text = buttonSmTextEnabled
             } else {
                 self.layer.borderColor = UIColor.hexStringToUIColor(hex: buttonPrimaryDisabledBorderColor).cgColor
                 self.titleLabel?.textColor = UIColor.hexStringToUIColor(hex: buttonPrimaryDisabledTextColor)
                 self.backgroundColor = UIColor.hexStringToUIColor(hex: buttonPrimaryDisabledBackgroundColor)
                 self.setBackgroundColor(color: UIColor.hexStringToUIColor(hex: buttonPrimaryDisabledBackgroundColor), forState: .disabled)
+                self.titleLabel?.text = buttonSmTextDisabled
             }
         }
     }
@@ -29,6 +31,7 @@ public class TBButtoniOS : UIButton {
     public override init(frame: CGRect) {
         super.init(frame: frame)
         self.layer.cornerRadius = buttonBaseBorderRadius
+        self.titleEdgeInsets = UIEdgeInsets(top: buttonTitleTopInset, left: buttonTitleLeftInset, bottom: buttonTitlebottomInset, right: buttonTitleRightInset)
     }
     
     required init?(coder: NSCoder) {
