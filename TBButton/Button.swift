@@ -10,7 +10,7 @@ import UIKit
 
 public class TBButtoniOS : UIButton {
     
-    override var isEnabled: Bool {
+    public override var isEnabled: Bool {
         didSet {
             if isEnabled {
                 self.layer.borderColor = UIColor.hexStringToUIColor(hex: buttonPrimaryDefaultBorderColor).cgColor
@@ -26,7 +26,7 @@ public class TBButtoniOS : UIButton {
         }
     }
 
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         self.layer.cornerRadius = buttonBaseBorderRadius
     }
