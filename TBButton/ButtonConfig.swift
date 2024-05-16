@@ -7,18 +7,20 @@
 
 import Foundation
 
-let buttonBaseBorderRadius = CGFloat(0.5)
+// some colors - #c03865, #f79400, #777777
+
+let buttonBaseBorderRadius = CGFloat(5)
 
 let buttonPrimaryDefaultBackgroundColor = "#1570ef"
 let buttonPrimaryDefaultBorderColor = "#1570ef"
-let buttonPrimaryDefaultTextColor = "#ffffff"
+let buttonPrimaryDefaultTextColor = "#f2f4f7"
 
-let buttonPrimaryDisabledBackgroundColor = "#f2f4f7"
+let buttonPrimaryDisabledBackgroundColor = "#eaecf0"
 let buttonPrimaryDisabledBorderColor = "#eaecf0"
-let buttonPrimaryDisabledTextColor = "#98a2b3"
+let buttonPrimaryDisabledTextColor = "#777777"
 
-let buttonSmTextEnabled = "Button title Enabled"
-let buttonSmTextDisabled = "Button title Disabled"
+let buttonSmTextEnabled = "Button title enabled"
+let buttonSmTextDisabled = "Button title disabled"
 
 let buttonTitleTopInset = CGFloat(1.0)
 let buttonTitlebottomInset = CGFloat(1.0)
