@@ -9,16 +9,9 @@ import Foundation
 
 let buttonBaseBorderRadius = CGFloat(0.5)
 
-//#define buttonBaseBorder [object Object]
-//#define buttonBaseShadow [object Object]
-//#define buttonBaseTransition [object Object]
-
 let buttonPrimaryDefaultBackgroundColor = "#1570ef"
 let buttonPrimaryDefaultBorderColor = "#1570ef"
 let buttonPrimaryDefaultTextColor = "#ffffff"
-
-//let buttonPrimaryHoverBackgroundColor = "#175cd3"
-//let buttonPrimaryHoverBorderColor = "#175cd3"
 
 let buttonPrimaryDisabledBackgroundColor = "#f2f4f7"
 let buttonPrimaryDisabledBorderColor = "#eaecf0"

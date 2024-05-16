@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class TBButton : UIButton {
+class TBButtoniOS : UIButton {
     
     override var isEnabled: Bool {
         didSet {
