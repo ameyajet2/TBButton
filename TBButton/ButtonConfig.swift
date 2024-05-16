@@ -17,7 +17,8 @@ let buttonPrimaryDisabledBackgroundColor = "#f2f4f7"
 let buttonPrimaryDisabledBorderColor = "#eaecf0"
 let buttonPrimaryDisabledTextColor = "#98a2b3"
 
-let buttonSmText = "Button title"
+let buttonSmTextEnabled = "Button title Enabled"
+let buttonSmTextDisabled = "Button title Disabled"
 
 //let buttonSecondaryDefaultBackgroundColor = "#ffffff"
 //let buttonSecondaryDefaultBorderColor = "#d0d5dd"
